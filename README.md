@@ -1,4 +1,4 @@
-# zsh-genotp
+# `zsh-genotp`
 
 Installs [`genotp`][link-genotp] and integrates it with zsh.
 
