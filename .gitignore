@@ -2,3 +2,8 @@
 
 # Private notes
 LOCAL-NOTES.md
+
+# binaries and script flag files
+bin
+bin/**
+_gotp-was-installed
