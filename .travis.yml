@@ -3,10 +3,11 @@ addons:
   apt:
     packages:
     - build-essential
+    - xz
 before_install:
 - export LOCAL="$(mktemp --directory --tmpdir=${TMPDIR:/tmp} local.bin.XXXXXX)"
-- curl -L http://downloads.sourceforge.net/zsh/zsh-5.0.7.tar.gz | tar zx
-- cd zsh-5.0.7
+- curl -L https://fourdots.com/mirror/zsh/zsh-5.7.1.tar.xz | tar zx
+- cd zsh-5.7.1
 - ./configure --prefix=$LOCAL
 - make
 - make install
