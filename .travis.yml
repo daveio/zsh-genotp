@@ -13,3 +13,4 @@ before_install:
 - cd -
 - export PATH="$LOCAL/bin:$PATH"
 script: zsh -c 'set +v; echo ${ZSH_VERSION}; source genotp.plugin.zsh; _genotp_ci_test param'
+

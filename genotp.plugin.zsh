@@ -5,3 +5,4 @@
 _genotp_ci_test () {
   echo "inside ci test function with ${#} args, first arg ${1}"
 }
+
