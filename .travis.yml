@@ -6,7 +6,7 @@ addons:
     - xz-utils
 before_install:
 - export LOCAL="$(mktemp --directory --tmpdir=${TMPDIR:/tmp} local.bin.XXXXXX)"
-- curl -L https://fourdots.com/mirror/zsh/zsh-5.7.1.tar.xz | tar zx
+- curl -L https://fourdots.com/mirror/zsh/zsh-5.7.1.tar.xz | xz -d - - | tar x
 - cd zsh-5.7.1
 - ./configure --prefix=$LOCAL
 - make
