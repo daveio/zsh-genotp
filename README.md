@@ -1,10 +1,10 @@
-# `zsh-genotp`
+# `zsh-gotp`
 
-[![Build Status](https://travis-ci.com/daveio/zsh-genotp.svg?branch=master)](https://travis-ci.com/daveio/zsh-genotp)
+[![Build Status](https://travis-ci.com/daveio/zsh-gotp.svg?branch=master)](https://travis-ci.com/daveio/zsh-gotp)
 
 
-Installs [`genotp`][link-genotp] and integrates it with zsh.
+Installs [`gotp`][link-gotp] and integrates it with zsh.
 
 ### NOT YET FUNCTIONAL OR READY FOR USE!
 
-[link-genotp]: https://github.com/daveio/genotp
+[link-gotp]: https://github.com/daveio/gotp
