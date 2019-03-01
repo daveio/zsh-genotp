@@ -3,7 +3,7 @@ addons:
   apt:
     packages:
     - build-essential
-    - xz
+    - xz-utils
 before_install:
 - export LOCAL="$(mktemp --directory --tmpdir=${TMPDIR:/tmp} local.bin.XXXXXX)"
 - curl -L https://fourdots.com/mirror/zsh/zsh-5.7.1.tar.xz | tar zx
