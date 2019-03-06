@@ -56,7 +56,6 @@ GOTP_STATUS=$?
 
 if [[ $GOTP_STATUS -eq 0 ]]; then
   # gotp is installed and available, we don't need to do anything yet
-  echo "gotp is installed and available, we don't need to do anything yet"
   true
 elif [[ $GOTP_STATUS -eq 253 ]]; then
   if [[ -z $GOTP_SILENCE_CLASH_WARNING ]]; then
@@ -70,7 +69,7 @@ elif [[ $GOTP_STATUS -eq 253 ]]; then
     echo -n "Your PATH is currently set to"
     echo " ${PATH}"
     echo "To silence this warning, set GOTP_SILENCE_CLASH_WARNING to any"
-    echo "non-empty value."
+    echo "non-zero value."
     true
   fi
 elif [[ $GOTP_STATUS -eq 254 ]]; then
@@ -85,3 +84,7 @@ else
 fi
 
 # gotp is now installed and the PATH set up
+
+# TODO alias otp='gotp generate'
+# TODO completion (don't forget the alias)
+# TODO binary update with new version check logic
