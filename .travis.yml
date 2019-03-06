@@ -1,17 +1,30 @@
-language: shell
+language: ruby
+rvm:
+  - 2.6.1
+
+before_script:
+ - chmod +x ./scripts/ci-build.sh # or do this locally and commit
+
+# Assume bundler is being used, therefore
+# the `install` step will run `bundle install` by default.
+script: ./scripts/ci-build.sh
+
+# branch whitelist, only for GitHub Pages
+branches:
+  only:
+  - gh-pages     # test the gh-pages branch
+  - /pages-(.*)/ # test every branch which starts with "pages-"
+
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+
 addons:
   apt:
     packages:
-    - build-essential
-    - xz-utils
-before_install:
-- export LOCAL="$(mktemp --directory --tmpdir=${TMPDIR:/tmp} local.bin.XXXXXX)"
-- curl -L https://www.zsh.org/pub/zsh-5.7.1.tar.xz | xz -d - | tar x
-- cd zsh-5.7.1
-- ./configure --prefix=$LOCAL
-- make
-- make install
-- cd -
-- export PATH="$LOCAL/bin:$PATH"
-script: zsh -c 'set +v; echo ${ZSH_VERSION}; source gotp.plugin.zsh; _gotp_ci_test param'
+    - libcurl4-openssl-dev
+
+sudo: false # route your build to the container-based infrastructure for a faster build
+
+cache: bundler # caching bundler gem packages will speed up build
 

@@ -1,9 +1,17 @@
+### https://raw.github.com/github/gitignore/e32de69dc7a71f84b1da648a5d893dd8bcc87d8a/Jekyll.gitignore
+
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+
 ### Custom
 
 # Private notes
 LOCAL-NOTES.md
 
-# binaries and script flag files
-bin
-bin/**
-_gotp-was-installed
+# Finder junk
+.DS_Store
+**/.DS_Store
+
